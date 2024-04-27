@@ -142,6 +142,25 @@ nav ul li a:hover::after {
   padding: 0px 0px 0px 15px;
 }
 
+/* .section3 a button{
+  height: 35px;
+  font-size: 20px;
+  position: absolute;
+  right: -70px;
+  border: none;
+  border-radius: 8px;
+  bottom: 57px;
+  padding: 5px;
+  background-color:  #007bff;
+  color: #fff;
+  align-items: center;
+  cursor: pointer;
+}
+.section3 a button:hover {
+  background-color: #0056b3;
+  transition: all 0.4s ease-in-out;
+} */
+
 .section3 div input::placeholder {
   display: flex;
   align-items: center;

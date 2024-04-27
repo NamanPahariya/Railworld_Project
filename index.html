@@ -6,6 +6,7 @@
         <title>Zomato</title>
 
         <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="food.css"> -->
         <!-- icon link -->
         <link
             href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
@@ -84,7 +85,11 @@
                     <div class="search">
                         <i class="ri-search-line"></i>
                     </div>
-                    <input type="text" placeholder="search for restaurant...">
+                    <a href="RecipesAPI.html">
+                        <input type="text" placeholder="search for food..." >
+                    </a>
+                   
+                    <!-- <a href="RecipesAPI.html"><button class="search_btn">search</button></a> -->
                 </div>
             </div>
 
@@ -421,14 +426,16 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
         <!-- animation script -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
         <!-- external script link -->
         <script src="script.js"></script>
         <!-- internal script tag -->
         <script>
-              AOS.init({
+            AOS.init({
                 duration: 800
-              });
-              
+            });
+            
             </script>
+            <!-- <script src="food.js"></script> -->
     </body>
 </html>
