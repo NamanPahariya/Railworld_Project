@@ -40,11 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const orderBtn = document.createElement('button');
         orderBtn.innerHTML = "Order now";
-  
+          
+        const rating = document.createElement('p');
+        rating.innerHTML = "3.5*"
           
         recipeElement.appendChild(imageElement);
         recipeElement.appendChild(nameElement);
         recipeElement.appendChild(orderBtn);
+        recipeElement.appendChild(rating);
         recipesContainer.appendChild(recipeElement);
       });
     }

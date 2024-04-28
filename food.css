@@ -17,51 +17,60 @@ body {
     /* justify-content: space-evenly */
     place-items: center;
     /* background-color: #091c32; */
-    background-color: #6d5c6a;
+    background-color:#FFFFFF;
   margin-top: 40px;
   row-gap: 10px;
 
   }
   
   .recipe {
-    margin: 10px;
-    padding: 10px;
+    margin-top: 100px;
+    padding: 7px;
     /* border: 1px solid #ccc; */
-    border-radius: 20px;
+    border-radius: 30px;
     /* background-color:#b5a4a4ad; */
     /* background-color: #475f17; */
     /* background-color: #8697C4; */
     /* background-color: #7b5252; */
-    background-color: #986e6e;
+    /* background-color: #986e6e; */
+    /* background-color: #33334d; */
     width: 300px;
-  transition: transform 0.5s ease-in-out;
-
+  /* transition: transform 0.5s ease-in-out; */
+  /* transition: box-shadow 1s; */
+  transition : box-shadow ease-in-out .12s;
+   /* height: 50%; */
     /* border: 2px solid red; */
     /* border: none; */
   }
 
   .recipe:hover{
-    /* box-shadow: 2px 2px 2px 2px white; */
-    transform: scale(1.1);
-    box-shadow: 1px 1px 1px 1px white;
+    
+   box-shadow:  inset 0 -3em 3em rgba(124, 122, 124, 0.584),
+    0 0 0 2px rgb(251, 251, 251),
+    0.3em 0.3em 1em rgba(104, 100, 100, 0.6);
   }
   
   .recipe h2 {
     /* margin-top: 0; */
-    color:black;
+    /* border: 2px solid rgb(236, 75, 75); */
+    /* background-color: #ceb0b0; */
+    border-radius: 10px;
+    padding: 6px;
+    /* color:#ceb0b0; */
   }
   
   .recipe img {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    /* background-size: cover; */
+    border-radius: 30px;
   }
 
   .recipe button{
     border: none;
-    color:#ceb0b0;
+    color:white;
     border-radius: 15px;
-    background-color: transparent;
+    background-color:#007bff;
     cursor: pointer;
   transition: transform 0.3s;
   font-size: 20px;
@@ -70,6 +79,21 @@ body {
 
   .recipe button:hover{
   transform: translateY(-0.2rem);
+
+  }
+
+  .recipe p{
+    background-color: rgb(10, 165, 10);
+    color: white;
+    width: 15%;
+    padding: 2px;
+    border-radius: 6px;
+    text-align: center;
+    /* position: relative;
+    bottom: 14%;
+    left: 80%; */
+    margin-left: 5px;
+
 
   }
   
