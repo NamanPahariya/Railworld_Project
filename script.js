@@ -119,6 +119,10 @@ gsap.from(".faq", {
   },
 });
 
+
+
+
+
 // FAQ funcionality
 const faqs = document.querySelectorAll(".faq");
 

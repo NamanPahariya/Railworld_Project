@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Signup</title>
+    <link rel="apple-touch-icon" sizes="180x180"
+    href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32"
+    href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16"
+    href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+        }
+
+        .form-container {
+            width: 28rem;
+            background-color: white;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 145px;
+            border-radius: 1rem;
+        }
+        .form-container:hover{
+            box-shadow:  inset 0 -1em 4em rgba(255, 249, 65, 0.584),
+    0 0 0 2px rgb(251, 251, 251),
+    0.3em 0.3em 1em rgba(104, 100, 100, 0.6);
+        }
+
+        img {
+            width: 100%;
+            max-width: 480px;
+            height: 200px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input {
+            width: 95%;
+            height: 1.8rem;
+            padding: 0.5rem;
+            margin-bottom: 1.2rem;
+            border-radius: 0.4rem;
+            border: 1px solid black;
+        }
+        input:hover{
+            box-shadow: 
+    0 0 0 2px rgb(251, 251, 251),
+    0.3em 0.3em 1em rgba(150, 140, 140, 0.6);
+        }
+
+        button {
+            width: 100%;
+            height: 2.5rem;
+            padding: 0.5rem;
+            background-color: #d32f2f;
+            color: white;
+            border-radius: 0.4rem;
+            border: 1px solid red;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c62828;
+           
+        }
+
+        p {
+            text-align: start;
+        }
+
+        a {
+            color: #d32f2f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .check-box {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 1rem;
+            margin-top: 15px;
+        }
+
+        .check {
+            width: 100%;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(207, 207, 207);
+            border-radius: 0.4rem;
+            cursor: pointer;
+            background: rgb(255, 255, 255);
+            user-select: none;
+        }
+        .check:hover{
+            box-shadow: 
+    0 0 0 2px rgb(251, 251, 251),
+    0.3em 0.3em 1em rgba(150, 140, 140, 0.6);
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .google-logo {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            display: block;
+            margin-top: 4px;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+            .form-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="form-container">
+        <img src="logo.jpg">
+        <h1>Sign Up</h1>
+        <form id="signup-form">
+            <input type="text" id="name" name="name" required placeholder="Full Name">
+            <input type="email" id="email" name="email" required placeholder="Email">
+            <span id="email-error" class="error-message"></span> <!-- Error message placeholder -->
+            <div class="checkbox">
+                <div class="check-box">
+                    <label color="#ED5A6B">
+                        <input type="checkbox" aria-checked="false" color="#ED5A6B"></label>
+                    <span>I agree to Zomato's <a href="https://www.zomato.com/conditions">Terms of Service</a>, <a
+                            href="https://www.zomato.com/privacy">Privacy Policy</a>, and <a
+                            href="https://www.zomato.com/policies">Content Policies</a></span>
+                </div>
+            </div>
+            <button type="submit">Create Account</button>
+            <hr>
+        </form>
+        <!-- Continue with Google -->
+        <div class="check">
+            <div role="button" aria-label="Continue with Google" class="check">
+                <img src="google.jpg" alt="Google Logo" class="google-logo">
+                <span id="continue-with-google">Continue with Google</span>
+            </div>
+        </div>
+        <p>Already have an account?<a href="login.html">Log In</a></p>
+    </div>
+</main>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('email').addEventListener('input', function () {
+            document.getElementById('email-error').textContent = '';
+        });
+
+        document.querySelector('#signup-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var fullName = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var checkbox = document.querySelector('input[type="checkbox"]').checked;
+
+            if (!fullName || !email) {
+                alert('Please enter your full name and email.');
+                return;
+            }
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            if (!checkbox) {
+                alert('Please agree to the Terms of Service, Privacy Policy, and Content Policies.');
+                return;
+            }
+            var accountCreated = true;
+
+            if (accountCreated) {
+                alert('Account created successfully!');
+                window.location.href = '/index.html';
+            } else {
+                alert('Account creation failed. Please try again.');
+            }
+        });
+        document.getElementById('continue-with-google').addEventListener('click', function () {
+            redirectToGooglePage();
+        });
+    });
+
+    function displayError(message) {
+        document.getElementById('email-error').textContent = message;
+        document.getElementById('email-error').style.color = 'red';
+    }
+
+    function redirectToGooglePage() {
+        window.location.href = "https://google.com";
+    }
+</script>
+
+</body>
+</html>
