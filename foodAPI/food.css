@@ -17,7 +17,7 @@ body {
     /* justify-content: space-evenly */
     place-items: center;
     /* background-color: #091c32; */
-    background-color:#FFFFFF;
+    background-color:#eae4e4;
   margin-top: 40px;
   row-gap: 10px;
 
@@ -38,17 +38,16 @@ body {
   /* transition: transform 0.5s ease-in-out; */
   /* transition: box-shadow 1s; */
   transition : box-shadow ease-in-out .12s;
+   
+  box-shadow:  inset 0 -3em 3em rgba(124, 122, 124, 0.584),
+  0 0 0 2px rgb(251, 251, 251),
+  0.3em 0.3em 1em rgba(104, 100, 100, 0.6);
    /* height: 50%; */
     /* border: 2px solid red; */
     /* border: none; */
   }
 
-  .recipe:hover{
-    
-   box-shadow:  inset 0 -3em 3em rgba(124, 122, 124, 0.584),
-    0 0 0 2px rgb(251, 251, 251),
-    0.3em 0.3em 1em rgba(104, 100, 100, 0.6);
-  }
+
   
   .recipe h2 {
     /* margin-top: 0; */

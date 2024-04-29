@@ -18,6 +18,7 @@
 5. Muskan -> Footer Design<br>
 6. Nishant -> Food Api<br>
 
+
 ## Description
 ### Zomato clone is more than just a clone; it's a unique culinary adventure meticulously crafted by our dedicated team of developers, designers, and food enthusiasts. Utilizing HTML, CSS, and JavaScript, we've crafted a sleek user interface and robust functionality.
 ## Project images 
